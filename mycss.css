@@ -1,0 +1,99 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #0e0e0e;
+  color: #fcfcfc;
+  font-family: 'Roboto Slab', serif;
+}
+
+.container {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.item-container {
+  position: relative;
+  width: 100%;
+  height: 94px;
+  margin-bottom: 20px;
+}
+
+.item-container:hover {
+  background: #181818;
+}
+
+.art:hover  {
+  transition: all 1000ms ease;
+  transform: scale(1.2);
+  opacity: 0.3;
+}
+
+.info-container {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  width: calc(100% - 120px);
+  transition: all 500ms ease;
+  margin-left: 0px;
+}
+
+.item-container:hover .info-container {
+  transition: all 500ms ease;
+  margin-left: 20px;
+  transition-delay: 250ms;
+}
+
+.track-name {
+  margin-top: 14px;
+  font-weight: bold;
+  font-size: 28px;
+  width: 100%;
+}
+
+.track-artist {
+  width: 100%;
+}
+
+.art {
+  width: 94px;
+  height: 94px;
+  border: 3px solid #fcfcfc;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  transition: all 300ms ease-in;
+  transform: scale(1);
+}
+
+.track-dance {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 16px;
+  transition: all 500ms ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.art:hover~.track-dance {
+  transition: all 500ms ease;
+  opacity: 1;
+}
+
+.info-container, .track-name, .track-artist {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+hr {
+  border-top: 6px solid #fcfcfc;
+}
