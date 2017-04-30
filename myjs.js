@@ -10,7 +10,7 @@
   window.location.hash = '';
 
   if (!params.access_token) {
-    window.location = 'https://accounts.spotify.com/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=http:%2F%2F' + window.location.hostname + ':' + window.location.port + '%2F&scope=' + scopes;
+    window.location = 'https://accounts.spotify.com/authorize?client_id=' + clientId + '&response_type=token&redirect_uri=http:%2F%2F' + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + '%2F&scope=' + scopes;
   } else {
     var handleError = function(resp) {
       console.log(resp.error);
